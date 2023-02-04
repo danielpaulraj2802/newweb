@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="contactus.css">
+    </head>
+  <body>
+    <!----loader-->
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
+    <div id="container">
+        <form>
+            <h2>Contact <span>me</span></h2>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your mail id" required>
+            <input type="phoneno" id="phoneno" placeholder="Phone no" required>
+            <textarea id="message"rows="4" placeholder="How Can We Help You" required></textarea>
+            <button type="submit">Send</button>
+
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+        setTimeout(function(){
+           $('.loader_bg').fadeToggle();
+     }, 1500);
+    </script>
+   </body>
+</html>

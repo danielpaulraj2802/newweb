@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css"
+</head>
+<body>
+     <!----loader-->
+     <div class="loader_bg">
+        <div class="loader"></div>
+      </div>
+    <form>
+        <h1>LOG<span>IN</span></h1>
+        <label>User<span>Name</span></label>
+        <input type="text">
+        <label>Pass<span>word</span></label>
+        <input type="password">
+        <button>Login</button>
+        <a>Forgot password?</a>
+
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
+</body>
+
+</html> 

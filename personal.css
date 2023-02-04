@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Port+Lligat+Sans&display=swap');
+
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background:black;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid red;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Port Lligat Sans', sans-serif;
+}
+#hero{
+    height: 100%;
+    width: 100%;
+    background-image: url(file:///C:/Users/Danielpaulraj/Desktop/index.html/channelpics/main.jpg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgb(8, 7, 11) 0%, rgb(6, 6, 10) 100%, rgb(4, 6, 6) 100%);
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.dropbtn{
+    background-color: red;
+    color: azure;
+    border: none;
+    border-radius: 8px;
+    font-size: medium;
+    padding: 5px;
+    font-weight: bolder;
+}
+.drop{
+    position:relative;
+    display: inline-block;
+}
+.dropcontents{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    box-shadow: rgb(102, 100, 100);
+    background-color:transparent;
+}
+.dropcontents a{
+    text-decoration: none;
+    padding: 12px;
+    display: block;
+    font-weight: bold;
+    color:red;
+}
+.dropcontents a:hover {background-color:black;}
+
+.drop:hover .dropcontents{display: block;}
+
+.drop:hover .dropbtn {background-color:black;}
+
+h2{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+span{
+    color: red; 
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+
+}
+
+
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-weight:bolder;
+    font-size: medium;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover{
+    color: red;
+    transition: .4s;
+}
+
+
+#btn{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: transform .4s;
+}
+
+#btn:hover{
+    transform: scale(1.2);
+}
+
+#content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+h1{
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+
+h1 span{
+    color: red;
+}
+
+h4{
+    color: rgba(255, 255, 255, 0.69);
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+h3{
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+#about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: black;
+}
+
+#about img{
+    height: auto;
+    width: 430px;
+}
+
+#about_text{
+    width: 550px;
+}
+
+#main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#about_text h1{
+    color:white;
+    font-size: 60px;
+}
+#h4 span{
+    color: red;
+}
+#about_text p{
+    color: wheat;
+    font-size: larger;
+    letter-spacing: 2px;
+    line-height: 30px;
+    margin-bottom: 45px;
+}
+#span p{
+    color: red;
+}
+
+#skill{
+    height: 100%;
+    width: 100%;
+    background-image: url(file:///C:/Users/Danielpaulraj/Desktop/index.html/channelpics/skill.jpg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#skills{
+    background-color: black;
+    width: 500px;
+    margin: 60px;
+    height: 100%;
+    justify-content: center;   
+}
+
+#skills h2{
+    color:white;
+    text-align: center;
+}
+#skills h2 span{
+    color: red;
+    text-align: center;
+   
+}
+
+#skills li{
+    margin: 20px 0px;
+    padding: 10px; 
+}
+#bar{
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3% cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+#bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg,rgba(236,0,140,1)0%,rgba(252,103,103,1)100%);
+}
+#HTML{
+    width: 50%;
+    animation: HTML 3s;
+}
+#Python{
+    width: 70%;
+    animation: Python 3s;
+}
+#C{
+    width: 50%;
+    animation: C 3s;
+}
+#css{
+    width: 45%;
+    animation: css 3s;
+}
+@keyframes HTML{
+    0%{
+        width: 0%;
+    }100%{
+        width: 50%;
+    }
+}
+@keyframes Python{
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+@keyframes C{
+    0%{
+        width: 0%;
+    }100%{
+        width: 50%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }100%{
+        width: 45%;
+    }
+}
+
+#contact-me{
+    width: 100%;
+    height: 290px;
+    background: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#contact-me p{
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: larger;
+}
+#contact-me #button{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 13px 30px;
+    transition: transform .4s;
+}
+
+#contact-me #button:hover{
+    background-color: transparent;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+
+#footer{
+    width: 100%;
+    background: black;
+  
+    
+}
+#footer p{
+    color: white;
+    text-align: center;
+    font-size: small;
+    
+}
